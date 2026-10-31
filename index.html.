@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sarang Enterprises | Solar Installation in Ayodhya & Faizabad</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--fg:#000;--mute:#555;--line:#d8d8d4;--sun:#ffb400;--blue:#0b2a5b;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101010;--fg:#fff;--mute:#a9a9a9;--line:#333;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101010;--fg:#fff;--mute:#a9a9a9;--line:#333;color-scheme:dark}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+@media(max-width:900px),(max-height:680px){html{scroll-snap-type:y proximity}}
+*{box-sizing:border-box;margin:0}
+body{background:#000;color:var(--fg);font:400 17px/1.6 'Barlow',system-ui,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.d{font-family:'Barlow Condensed','Arial Narrow',Impact,sans-serif;font-weight:900;text-transform:uppercase;line-height:.9}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px;width:100%}
+/* chrome */
+nav{position:fixed;inset:0 0 auto 0;z-index:30;background:#000;color:#fff;padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:900 26px/1 'Barlow Condensed',sans-serif;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:20px;height:20px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px rgba(255,180,0,.25)}
+.btn{display:inline-block;background:var(--sun);color:#000;font:800 17px/1 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.05em;padding:16px 28px;border-radius:40px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:scale(1.05)}
+.btn.sm{padding:12px 20px;font-size:15px}.btn.ink{background:#000;color:#fff}.btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
+#bar{position:fixed;top:calc(64px + env(safe-area-inset-top,0px));left:0;height:3px;width:100%;background:var(--sun);transform-origin:0 50%;transform:scaleX(0);z-index:31}
+#dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:30;display:flex;flex-direction:column;gap:14px}
+#dots a{width:12px;height:12px;border-radius:50%;border:2px solid var(--sun);background:transparent;display:block;transition:.25s}
+#dots a.on{background:var(--sun);transform:scale(1.35)}
+#cnt{position:fixed;left:28px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:30;font:800 20px/1 'Barlow Condensed',sans-serif;color:var(--sun);mix-blend-mode:normal;text-shadow:0 0 6px rgba(0,0,0,.5)}
+@media(max-width:700px){#dots{right:8px}#cnt{display:none}}
+/* slides */
+section{min-height:100svh;scroll-snap-align:start;padding:110px 0 70px;display:flex;align-items:center;position:relative;overflow:hidden}
+.k{background:#000;color:#fff}.w{background:var(--bg);color:var(--fg)}.y{background:var(--sun);color:#000}
+h2{font-size:clamp(46px,7.4vw,112px);margin-bottom:30px}
+.lead{font-size:20px;max-width:560px;color:var(--mute)}.k .lead{color:#c9c9c9}.y .lead{color:#222}
+/* reveal on slide enter */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+section.in .rv{opacity:1;transform:none}
+section.in .rv:nth-child(2){transition-delay:.12s}section.in .rv:nth-child(3){transition-delay:.24s}section.in .rv:nth-child(4){transition-delay:.36s}
+/* hero */
+.hero{padding-bottom:40px}
+.hero h1{font-size:clamp(60px,11vw,172px);position:relative;z-index:2}
+.hero h1 span{display:block;overflow:hidden}.hero h1 b{display:block;transform:translateY(105%);transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.hero.in h1 b{transform:none}.hero.in h1 span:nth-child(2) b{transition-delay:.12s}.hero.in h1 span:nth-child(3) b{transition-delay:.24s}
+.hero .sub{position:relative;z-index:2;max-width:480px;margin:24px 0 28px;font-size:19px;color:#e6e6e6}
+.row{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
+.sunw{position:absolute;right:-6vw;top:-8vh;width:min(54vw,640px);aspect-ratio:1;pointer-events:none}
+.sunw::before{content:"";position:absolute;inset:-35%;background:repeating-conic-gradient(from 0deg,rgba(255,190,0,.22) 0 5deg,transparent 5deg 15deg);border-radius:50%;animation:spin 60s linear infinite;-webkit-mask:radial-gradient(circle,transparent 24%,#000 26%,transparent 70%);mask:radial-gradient(circle,transparent 24%,#000 26%,transparent 70%)}
+.sunw::after{content:"";position:absolute;inset:22%;border-radius:50%;background:radial-gradient(circle at 40% 38%,#ffe27a,#ffb400 45%,#ff6a00);box-shadow:0 0 120px 30px rgba(255,150,0,.4);animation:pulse 5s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{transform:scale(1.05)}}
+.stage{position:absolute;right:-4vw;bottom:-6vh;width:min(62vw,820px);height:min(50vh,430px);perspective:1100px;pointer-events:none}
+.arr{position:absolute;inset:0;display:grid;grid-template-columns:repeat(6,1fr);gap:7px;transform:rotateX(58deg) rotateZ(-24deg) scale(.95);transform-style:preserve-3d;opacity:0;transition:opacity 1s .5s}
+.hero.in .arr{opacity:1}
+.arr i{background:linear-gradient(135deg,#1d4f9c,var(--blue) 60%,#06172f);border:1px solid #5b86c9;background-image:linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(135deg,#1d4f9c,#0b2a5b 60%,#06172f);background-size:25% 100%,100% 33%,auto;box-shadow:0 8px 14px rgba(0,0,0,.5)}
+.glare{position:absolute;inset:0;transform:rotateX(58deg) rotateZ(-24deg) scale(.95);background:linear-gradient(105deg,transparent 40%,rgba(255,235,160,.55) 50%,transparent 60%);background-size:260% 100%;animation:glare 4.5s ease-in-out infinite;mix-blend-mode:screen}
+@keyframes glare{from{background-position:130% 0}to{background-position:-30% 0}}
+.hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font-size:13px;color:#aaa;z-index:3;animation:nudge 2s infinite}
+@keyframes nudge{50%{transform:translate(-50%,6px)}}
+/* flow */
+.flow{display:grid;grid-template-columns:.8fr 1.4fr;gap:40px;align-items:center}
+.tog{display:inline-flex;background:#e9e9e5;border-radius:40px;padding:5px;margin:6px 0 20px}
+.tog button{font:800 17px/1 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.05em;border:0;border-radius:40px;padding:13px 24px;cursor:pointer;background:transparent;color:#000}
+.tog button[aria-pressed=true]{background:#000;color:#fff}
+#cap{min-height:96px;color:var(--mute)}
+svg text{font:700 17px 'Barlow',sans-serif}
+.fl{stroke:var(--sun);stroke-width:4;stroke-dasharray:3 13;stroke-linecap:round;fill:none;animation:dash 1.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-32}}
+#batt{opacity:0;transition:opacity .5s}.hy #batt{opacity:1}
+.nd{fill:var(--bg);stroke:var(--fg);stroke-width:3}.nt{fill:var(--fg)}
+@media(max-width:900px){.flow{grid-template-columns:1fr}}
+/* panels */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;width:100%}
+.pn{min-height:430px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;background:#1b1b1b;color:#fff;overflow:hidden;transition:transform .3s}
+.pn:hover{transform:translateY(-8px)}.pn:nth-child(2){background:var(--sun);color:#000}
+.pn svg{position:absolute;top:24px;right:24px;width:90px;height:90px}
+.pn h3{font-size:52px;margin-bottom:12px}.pn p{max-width:320px}
+@media(max-width:900px){.g3{grid-template-columns:1fr}.pn{min-height:280px}}
+/* calc */
+.cal{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
+.bill{font:900 clamp(60px,9vw,128px)/1 'Barlow Condensed',sans-serif;color:var(--sun)}
+input[type=range]{width:100%;accent-color:var(--sun);height:34px}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.res div{border-top:2px solid var(--sun);padding-top:12px}.res strong{display:block;font:900 clamp(40px,5vw,68px)/1 'Barlow Condensed',sans-serif}.res span{color:#bbb;font-size:15px}
+.roof{background:linear-gradient(#26262a,#171719);border:2px solid #3a3a40;padding:18px;clip-path:polygon(0 12%,50% 0,100% 12%,100% 100%,0 100%);padding-top:12%;aspect-ratio:1.25;display:grid;grid-template-columns:repeat(8,1fr);gap:6px;align-content:start}
+.roof i{aspect-ratio:1/1.3;background:linear-gradient(135deg,#2a63b8,#0b2a5b);border:1px solid #6b93d4;transform:scale(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.roof i.on{transform:scale(1)}
+.fine{font-size:14px;color:#999;margin-top:18px;max-width:500px}
+@media(max-width:900px){.cal{grid-template-columns:1fr}}
+/* steps */
+.sp{display:grid;grid-template-columns:repeat(4,1fr);position:relative;margin-top:50px}
+.sp::before{content:"";position:absolute;top:34px;left:0;right:0;height:4px;background:var(--line)}
+.sp::after{content:"";position:absolute;top:34px;left:0;height:4px;width:0;background:var(--sun);transition:width 2.2s .3s ease}
+section.in .sp::after{width:100%}
+.st{padding-right:22px;position:relative}
+.st .d{width:70px;height:70px;border-radius:50%;background:#000;color:var(--sun);font-size:40px;display:grid;place-items:center;line-height:1;padding-top:6px;margin-bottom:22px;position:relative;z-index:1}
+.st h3{font-size:34px;margin-bottom:8px}.st p{color:var(--mute);font-size:16px}
+@media(max-width:800px){.sp{grid-template-columns:1fr;gap:26px}.sp::before,.sp::after{display:none}}
+/* why */
+.wy{display:grid;grid-template-columns:1fr 1fr;gap:0 50px}.wy div{padding:22px 0;border-top:2px solid #000}.wy h3{font-size:40px;margin-bottom:6px}
+@media(max-width:760px){.wy{grid-template-columns:1fr}}
+/* contact */
+.ff{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:740px}
+.ff input,.ff select,.ff textarea{width:100%;padding:17px 18px;font:500 17px 'Barlow',sans-serif;border:2px solid #000;border-radius:0;background:#fff;color:#000}
+.ff .f{grid-column:1/-1}.sr{position:absolute;left:-9999px}
+@media(max-width:600px){.ff{grid-template-columns:1fr}}
+.ft{margin-top:36px;font-size:15px;color:#222}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1 b,.arr{opacity:1;transform:none}.arr{transform:rotateX(58deg) rotateZ(-24deg)}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#s0"><i></i>Sarang Enterprises</a><a class="btn sm" href="#s6">Get a quote</a></div></nav>
+<div id="bar"></div><div id="dots" aria-label="Slides"></div><div id="cnt">01 / 07</div>
+
+<section class="k hero" id="s0" data-t="Home"><div class="sunw" aria-hidden="true"></div>
+<div class="stage" aria-hidden="true"><div class="arr" id="arr"></div><div class="glare"></div></div>
+<div class="wrap"><h1><span><b>Own the</b></span><span><b>sunlight.</b></span><span><b>Cut the bill.</b></span></h1>
+<p class="sub">Rooftop solar for homes, shops and businesses in Ayodhya and Faizabad. We design, install and help you finance it.</p>
+<div class="row"><a class="btn" href="#s6">Get a free site visit</a><a class="btn ghost" href="#s3">Check your savings</a></div></div>
+<div class="hint">Scroll</div></section>
+
+<section class="w" id="s1" data-t="How it works"><div class="wrap flow">
+<div><h2 class="rv">How solar<br>powers you.</h2>
+<div class="tog rv" role="group" aria-label="System type"><button id="b1" aria-pressed="true">On-grid</button><button id="b2" aria-pressed="false">Hybrid</button></div>
+<p id="cap" class="rv"></p></div>
+<svg viewBox="0 0 1000 430" id="fs" class="rv" role="img" aria-label="Energy flow from sun to panels, inverter, home and grid">
+<g stroke="#ffb400" stroke-width="4" stroke-linecap="round"><path d="M110 30v-14M110 150v14M50 90H36M170 90h14M68 48 58 38M152 132l10 10M152 48l10-10M68 132 58 142"/></g>
+<circle cx="110" cy="90" r="42" fill="#ffb400"/>
+<path class="fl" d="M140 120 C220 170 250 190 300 200"/>
+<g><rect class="nd" x="300" y="150" width="190" height="100" rx="8"/><path d="M300 200h190M363 150v100M427 150v100" stroke="var(--fg)" stroke-width="1.5"/><text class="nt" x="395" y="278" text-anchor="middle">Solar panels</text></g>
+<path class="fl" d="M490 200H610"/>
+<g><rect class="nd" x="610" y="160" width="120" height="80" rx="8"/><text class="nt" x="670" y="196" text-anchor="middle">Inverter</text><text class="nt" x="670" y="220" text-anchor="middle" style="font-size:13px">DC to AC</text></g>
+<path class="fl" d="M730 180 C790 160 810 120 850 100"/><path class="fl" d="M730 220 C790 250 810 300 850 320"/>
+<g><path class="nd" d="M850 100 l60-45 60 45v50h-120z"/><text class="nt" x="910" y="135" text-anchor="middle">Your home</text></g>
+<g><rect class="nd" x="850" y="300" width="120" height="70" rx="8"/><text class="nt" x="910" y="330" text-anchor="middle">Grid</text><text class="nt" x="910" y="352" text-anchor="middle" style="font-size:13px">net metering</text></g>
+<g id="batt"><path class="fl" d="M670 240V320"/><rect class="nd" x="610" y="320" width="120" height="70" rx="8"/><rect x="730" y="340" width="10" height="30" fill="var(--fg)"/><text class="nt" x="670" y="361" text-anchor="middle">Battery</text></g>
+</svg></div></section>
+
+<section class="k" id="s2" data-t="Solutions"><div class="wrap"><h2 class="rv">Built for<br>every roof.</h2>
+<div class="g3 rv">
+<article class="pn"><svg viewBox="0 0 64 64" fill="none" stroke="#ffb400" stroke-width="3"><path d="M6 32 32 10l26 22"/><path d="M14 28v26h36V28"/><path d="M26 54V38h12v16"/></svg><h3>Home solar</h3><p>Rooftop systems sized to your family’s usage and connected to the grid.</p></article>
+<article class="pn"><svg viewBox="0 0 64 64" fill="none" stroke="#000" stroke-width="3"><rect x="8" y="22" width="48" height="32"/><path d="M8 22 14 10h36l6 12M26 54V40h12v14"/></svg><h3>Shops &amp; business</h3><p>Cut daytime power costs for shops, clinics, schools and small factories.</p></article>
+<article class="pn"><svg viewBox="0 0 64 64" fill="none" stroke="#ffb400" stroke-width="3"><rect x="10" y="18" width="44" height="30" rx="3"/><circle cx="32" cy="33" r="7"/><path d="M10 54h44"/></svg><h3>Loan &amp; subsidy help</h3><p>We prepare the bank loan file and disbursement application for you.</p></article>
+</div></div></section>
+
+<section class="k" id="s3" data-t="Calculator" style="border-top:1px solid #222"><div class="wrap cal">
+<div><h2 class="rv">What do you<br>pay now?</h2>
+<label for="bill" class="rv" style="font-weight:600">Monthly electricity bill</label>
+<div class="bill" id="bo">₹3,000</div><input id="bill" type="range" min="500" max="30000" step="500" value="3000">
+<div class="res"><div><strong id="kw">5 kW</strong><span>Suggested system size</span></div><div><strong id="sv">₹30K</strong><span>Possible yearly savings</span></div></div>
+<p class="fine">A rough guide. It assumes about ₹7 per unit, 120 units per kW each month and 550 W panels. Your real size depends on roof space, shade and sanctioned load.</p>
+<p style="margin-top:20px"><a class="btn" href="#s6">Get my exact quote</a></p></div>
+<div><div class="roof" id="roof" role="img" aria-label="Roof showing the panels your system needs"></div><p class="fine" id="pc" style="text-align:center;margin:12px auto 0"></p></div>
+</div></section>
+
+<section class="w" id="s4" data-t="Process"><div class="wrap"><h2 class="rv">Sun on your roof<br>in four steps.</h2>
+<div class="sp"><div class="st"><div class="d">1</div><h3>Site visit</h3><p>We check roof, shade and load. Free, with no obligation.</p></div>
+<div class="st"><div class="d">2</div><h3>Quote &amp; loan</h3><p>A clear price. We prepare the bank loan file if you want to finance it.</p></div>
+<div class="st"><div class="d">3</div><h3>Installation</h3><p>Our team mounts panels, wiring and inverter, then tests the system.</p></div>
+<div class="st"><div class="d">4</div><h3>Switch on</h3><p>We handle the net metering application. Then your meter slows down.</p></div></div></div></section>
+
+<section class="y" id="s5" data-t="Why Sarang"><div class="wrap"><h2 class="rv">Why Sarang.</h2>
+<div class="wy rv"><div><h3>Local team</h3><p>Based in Faizabad and Ayodhya, close when you need service.</p></div>
+<div><h3>Paperwork done</h3><p>Loan files, disbursement applications and meter forms handled for you.</p></div>
+<div><h3>Honest sizing</h3><p>We size the system to your usage, not to a bigger sale.</p></div>
+<div><h3>Quality parts</h3><p>Tier-1 panels and reliable inverters with warranty support.</p></div></div></div></section>
+
+<section class="k" id="s6" data-t="Contact"><div class="wrap"><h2 class="rv" style="color:var(--sun);font-size:clamp(56px,10vw,160px)">Let’s go solar.</h2>
+<form class="ff rv" onsubmit="return false">
+<label class="sr" for="n">Name</label><input id="n" placeholder="Your name" required>
+<label class="sr" for="p">Phone</label><input id="p" type="tel" placeholder="Phone number" required>
+<label class="sr" for="t">Interest</label><select id="t" class="f"><option>Home solar</option><option>Shop or business solar</option><option>Hybrid with battery</option><option>Loan and subsidy help</option></select>
+<label class="sr" for="m">Message</label><textarea id="m" class="f" rows="3" placeholder="Monthly bill, location or any question"></textarea>
+<div class="f"><button class="btn" id="go" type="button">Send on WhatsApp</button></div></form>
+<p class="ft" style="color:#aaa">© 2026 Sarang Enterprises. Solar installation and financing support, Faizabad and Ayodhya, Uttar Pradesh.</p></div></section>
+
+<script>
+var WA="919999999999"; // replace with the company WhatsApp number (country code, digits only)
+var $=function(i){return document.getElementById(i)},S=[].slice.call(document.querySelectorAll("section"));
+var arr=$("arr");for(var i=0;i<24;i++)arr.appendChild(document.createElement("i"));
+var roof=$("roof");for(i=0;i<40;i++)roof.appendChild(document.createElement("i"));
+var dots=$("dots");S.forEach(function(s,j){var a=document.createElement("a");a.href="#"+s.id;a.title=s.dataset.t;a.setAttribute("aria-label",s.dataset.t);dots.appendChild(a)});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");var j=S.indexOf(e.target);[].forEach.call(dots.children,function(d,k){d.classList.toggle("on",k==j)});$("cnt").textContent="0"+(j+1)+" / 0"+S.length}})},{threshold:.5});
+S.forEach(function(s){io.observe(s)});
+addEventListener("scroll",function(){var h=document.documentElement;$("bar").style.transform="scaleX("+(h.scrollTop/(h.scrollHeight-h.clientHeight||1))+")"},{passive:true});
+/* flow toggle */
+var caps={g:"On-grid: panels power your home by day. Extra units go to the grid through net metering and lower your bill. No battery, lowest cost.",h:"Hybrid: a battery stores spare power. Your lights, fans and fridge keep running in a power cut. Higher cost, more security."};
+function mode(h){$("fs").classList.toggle("hy",h);$("b1").setAttribute("aria-pressed",!h);$("b2").setAttribute("aria-pressed",h);$("cap").textContent=h?caps.h:caps.g}
+$("b1").onclick=function(){mode(false)};$("b2").onclick=function(){mode(true)};mode(false);
+/* calculator */
+var cur={kw:0,sv:0,b:0};
+function tween(el,from,to,fmt){var t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/600),v=from+(to-from)*p;el.textContent=fmt(v);if(p<1)requestAnimationFrame(f)})(t0)}
+function calc(){var b=+$("bill").value,kw=Math.max(1,Math.round(b/7/120)),yr=b*12*.85,pn=Math.ceil(kw*1000/550);
+ $("bo").textContent="₹"+b.toLocaleString("en-IN");
+ tween($("kw"),cur.kw,kw,function(v){return Math.round(v)+" kW"});
+ tween($("sv"),cur.sv,yr,function(v){return v>=1e5?"₹"+(v/1e5).toFixed(1)+"L":"₹"+Math.round(v/1e3)+"K"});
+ cur.kw=kw;cur.sv=yr;
+ [].forEach.call(roof.children,function(c,k){c.style.transitionDelay=(k*18)+"ms";c.classList.toggle("on",k<pn)});
+ $("pc").textContent=pn+" panels"+(pn>40?" (showing 40)":"")+" of 550 W each"}
+$("bill").addEventListener("input",calc);calc();
+$("go").onclick=function(){var n=$("n").value.trim(),p=$("p").value.trim();if(!n||!p){(n?$("p"):$("n")).focus();return}
+ open("https://wa.me/"+WA+"?text="+encodeURIComponent("Hello Sarang Enterprises, I am "+n+" ("+p+"). Interested in: "+$("t").value+". "+$("m").value),"_blank")};
+</script>
+</body>
+</html>
